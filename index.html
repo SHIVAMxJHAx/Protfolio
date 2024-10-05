@@ -45,6 +45,7 @@
         </div>
         <div class="nav-button">
             <button class= "btn"><a href="resume.jpg">Download</a> CV <i class="uil uil-file-alt"></i></button>
+            <button class= "btn" >  <audio controls><source src ="Suzume no Tojimari『Suzume』Theme Song.mp3"  onclick="myMenuFunction()"></audio></button>
         </div>
         <div class="nav-menu-btn">
             <i class="uil uil-bars" onclick="myMenuFunction()"></i>
@@ -76,7 +77,7 @@
                 <div class="icon"><a href="https://www.instagram.com/its_hulk_0001?igsh=cmowenBkNm9kd3Rk"><i class="uil uil-instagram"></i></a></div>
                 <div class="icon"><a href="https://www.linkedin.com/in/shivam-jha-aa034b320?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" ><i class="uil uil-linkedin-alt"></i></a></div>
                 <div class="icon"><a href="https://x.com/Shivam_x_0001?t=mWvPMxxGsMUYK9GOMdKdWw&s=09"><i class="uil uil-dribbble"></i> </a> </div>
-                <div class="icon"><a href="https://shivamxeric.github.io/Protfolio/"><i class="uil uil-github-alt"></i></a></div>
+                <div class="icon"><a href="https://github.com/SHIVAMxJHAx"><i class="uil uil-github-alt"></i></a></div>
             </div>
           </div>
           <div class="featured-image">
@@ -213,7 +214,7 @@
     <!-- --------------- FOOTER --------------- -->
     <footer>
         <div class="top-footer">
-            <p>Shivam Jha .</p>
+            <p>Shivam Jha </p>
         </div>
         <div class="middle-footer">
             <ul class="footer-menu">
@@ -235,7 +236,7 @@
             <div class="icon"><a href="https://www.instagram.com/its_hulk_0001?igsh=cmowenBkNm9kd3Rk"><i class="uil uil-instagram"></i></a></div>
             <div class="icon"><a href="https://www.linkedin.com/in/shivam-jha-aa034b320?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" ><i class="uil uil-linkedin-alt"></i></a></div>
             <div class="icon"><a href="https://x.com/Shivam_x_0001?t=mWvPMxxGsMUYK9GOMdKdWw&s=09"><i class="uil uil-dribbble"></i> </a> </div>
-            <div class="icon"><a href="https://shivamxeric.github.io/Protfolio/"><i class="uil uil-github-alt"></i></a></div>
+            <div class="icon"><a href="https://github.com/SHIVAMxJHAx"><i class="uil uil-github-alt"></i></a></div>
         </div>
         <div class="bottom-footer">
             <p>Copyright © <a href="#home" style="text-decoration: none;">Shivam Jha</a> - All rights reserved</p>
@@ -444,6 +445,18 @@ html{
 /* ---##-- REUSABLE CSS --##--- */
 
 /* ----- GLOBAL BUTTON DESIGN ----- */
+audio{
+    font-weight: 500;
+  height: 20px;
+  width: 125px;
+    background: #efefef;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s;
+
+ 
+}
 .btn{
     font-weight: 500;
     padding: 12px 20px;
@@ -452,6 +465,8 @@ html{
     border-radius: 10px;
     cursor: pointer;
     transition: .4s;
+
+    margin-left: 30px;
 }
 .btn>i{
     margin-left: 10px;
@@ -474,6 +489,7 @@ i{
 /* ------- BASE -------- */
 body{
     background: var(--body-color);
+    font-weight: 500;
 }
 .container{
     width: 100%;
@@ -634,6 +650,7 @@ nav{
     width: 50%;
 }
 .image{
+    border: 10px solid gray;
     margin: auto 0;
     width: 380px;
     height: 380px;
@@ -645,6 +662,9 @@ nav{
     width: 380px;
     height: 380px;
     object-fit: cover;
+}
+.image:hover{
+    border: 10px solid #212121;
 }
 @keyframes imgFloat {
     50%{
