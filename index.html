@@ -45,7 +45,12 @@
         </div>
         <div class="nav-button">
             <button class= "btn"><a href="resume.jpg">Download</a> CV <i class="uil uil-file-alt"></i></button>
-            <button class= "btn" >  <audio controls><source src ="Suzume no Tojimari『Suzume』Theme Song.mp3"  onclick="myMenuFunction()"></audio></button>
+            <button class="btn" id="musicButton">Play Music</button>
+            <audio id="backgroundMusic" preload="auto">
+                <source src="Suzume no Tojimari『Suzume』Theme Song.mp3" type="audio/mpeg">
+                Your browser does not support the audio tag.
+            </audio>
+        
         </div>
         <div class="nav-menu-btn">
             <i class="uil uil-bars" onclick="myMenuFunction()"></i>
@@ -256,6 +261,7 @@
 
     <!-- ----- MAIN JS ----- -->
     <script>/* ----- NAVIGATION BAR FUNCTION ----- */
+
         function myMenuFunction(){
           var menuBtn = document.getElementById("myNavMenu");
     
@@ -265,7 +271,27 @@
             menuBtn.className = "nav-menu";
           }
         }
-    
+    /*------------  music  ---------------*/
+    const button = document.getElementById('musicButton');
+        const music = document.getElementById('backgroundMusic');
+        let isPlaying = false;
+
+        document.body.addEventListener('mouseenter', () =>{
+            music.play();
+            button.textContent = "Pause Music";
+
+        })
+        button.addEventListener('click', () => {
+            if (isPlaying) {
+                music.pause();
+                music.currentTime = 0; // Reset the music to the start
+                button.textContent = "Play Music"; // Update button text
+            } else {
+                music.play();
+                button.textContent = "Pause Music"; // Update button text
+            }
+            isPlaying = !isPlaying; // Toggle state
+        });
     /* ----- ADD SHADOW ON NAVIGATION BAR WHILE SCROLLING ----- */
         window.onscroll = function() {headerShadow()};
     
@@ -445,18 +471,8 @@ html{
 /* ---##-- REUSABLE CSS --##--- */
 
 /* ----- GLOBAL BUTTON DESIGN ----- */
-audio{
-    font-weight: 500;
-  height: 20px;
-  width: 125px;
-    background: #efefef;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: .4s;
 
- 
-}
+
 .btn{
     font-weight: 500;
     padding: 12px 20px;
